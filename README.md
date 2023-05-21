@@ -10,7 +10,7 @@ Figmas paigalda Figma Design Studio nimeline pistikprogramm. Sealt tuleb eksport
 
 ## Käsklused
 
-`package.json`sisaldab järgmisi käsklusi
+`package.json`sisaldab järgmisi käsklusi:  
 Esimesed kolm võtavad failist `tokens.json` disainitookenid ning jagavad need eraldi teemafailidesse:
 
 ```javascript
