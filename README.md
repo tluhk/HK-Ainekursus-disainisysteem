@@ -1,45 +1,50 @@
 # Paigaldusjuhis
 
-Lisa fail "build.js"
-Lisa fail "fns"
-Konfigureeri package.json failis õige failirada, siin: "build-tw": "postcss ./src/main.css -o ./dist/styles.css",
+- Kontrolli, kas su masinasse on paigaldatud Node.js
+- Klooni rakendus oma masinasse
+- Jooksuta käsklust `npm install`
 
-Nüüd on tailwind.config.js selline:  
+## Figma kasutamine
+
+Figmas paigalda Figma Design Studio nimeline pistikprogramm. Sealt tuleb eksportida json fail, mille nimi peab olema `tokens.json`. Eksportida tuleb see otse siiinsesse kausta (kui see on juba paigaldatud oma masinasse) või kasutades pistikprogrammi enda võimalusi mõnda git'i repositooriumisse koos muu materjaliga.
+
+## Käsklused
+
+`package.json`sisaldab järgmisi käsklusi
+Esimesed kolm võtavad failist `tokens.json` disainitookenid ning jagavad need eraldi teemafailidesse:
+
 ```javascript
-/** @type {import('tailwindcss').Config} */
-module.exports = {
-  content: ['./src/**/*.{html,js}', './src/index.html'],
-  theme: {
-    extend: {},
-  },
-  plugins: [],
-}
+    "build-transform-global": "npx token-transformer tokens.json tokens/global.json global",
+    "build-transform-light": "npx token-transformer tokens.json tokens/light.json global,light,theme global",
+    "build-transform-dark": "npx token-transformer tokens.json tokens/dark.json global,dark,theme global",
 ```
 
-### lisame kõik vajaliku, et Tailwind hakkaks meie muutujaid kasutama:
+Neljas käsklus muudab eelmises käsus jagatud failid süsteemile sobivaks:
 
 ```javascript
-const { filterTokensByType } = require("./fns");
-const lightTokens = require("./output/light.json")
-const darkTokens = require("./output/dark.json")
-const globalTokens = require("./output/global.json")
+    "build-transform": "npm run build-transform-global && npm run build-transform-light && npm run build-transform-dark",
+```
 
-const lightColors = filterTokensByType('color', lightTokens)
-const darkColors = filterTokensByType('color', darkTokens)
-const globalColors = filterTokensByType('color', globalTokens)
+Viies ehitab muutujad:
 
-/** @type {import('tailwindcss').Config} */
-module.exports = {
-  content: ['./src/**/*.{html,js}', './src/index.html'],
-  darkMode: 'class', 
-  theme: {
-    colors: {
-      ...globalColors,
-      ...lightColors,
-      dark: darkColors // adding dark theme colors under a "dark" key
-    }
-  },
-  variants: {},
-  plugins: [],
-}
+```javascript
+    "build-sd": "node build.js",
+```
+
+Kuues genereerib Tailwindi stiilid:
+
+```javascript
+    "build-tw": "postcss ./styles.css -o ./tailwind.css",
+```
+
+Seitsmes jooksutab korraga kõik käsud;
+
+```javascript
+    "build": "npm run build-transform && npm run build-sd && npm run build-tw",
+```
+
+Kaheksas puhastab css-faili ebavajalikust sodist:
+
+```javascript
+    "normalglobal": "node updateclean.js"
 ```
