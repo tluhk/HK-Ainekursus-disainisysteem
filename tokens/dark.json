@@ -1,0 +1,173 @@
+{
+  "text": {
+    "value": "#f1f2f4",
+    "type": "color"
+  },
+  "link": {
+    "value": "#f1f2f4",
+    "type": "color"
+  },
+  "link-idle": {
+    "value": "#7b8593",
+    "type": "color"
+  },
+  "link-active": {
+    "value": "#664d80",
+    "type": "color"
+  },
+  "drop-shadow": {
+    "value": {
+      "x": 4,
+      "y": 4,
+      "blur": 11,
+      "spread": 0,
+      "color": "#05020850",
+      "type": "dropShadow"
+    },
+    "type": "boxShadow"
+  },
+  "drop-shadow-strong": {
+    "value": {
+      "x": 0,
+      "y": 0,
+      "blur": 22,
+      "spread": 0,
+      "color": "#f2eff5",
+      "type": "dropShadow"
+    },
+    "type": "boxShadow"
+  },
+  "link-hover": {
+    "value": "#c7cbd1",
+    "type": "color"
+  },
+  "page-background": {
+    "value": "#050208",
+    "type": "color"
+  },
+  "button": {
+    "default": {
+      "value": "#80609f",
+      "type": "color"
+    },
+    "hover": {
+      "value": "#664d80",
+      "type": "color"
+    },
+    "active": {
+      "value": "#4d2e6b",
+      "type": "color"
+    },
+    "focus": {
+      "value": "#80609f",
+      "type": "color"
+    },
+    "disabled": {
+      "value": "#abb1ba",
+      "type": "color"
+    },
+    "secondary-default": {
+      "value": "#b39fc6",
+      "type": "color"
+    },
+    "secondary-label-default": {
+      "value": "#f1f2f4",
+      "type": "color"
+    },
+    "secondary-hover": {
+      "value": "#9980b3",
+      "type": "color"
+    },
+    "secondary-active": {
+      "value": "#80609f",
+      "type": "color"
+    },
+    "secondary-focus": {
+      "value": "#b39fc6",
+      "type": "color"
+    },
+    "secondary-disabled": {
+      "value": "#e3e5e8",
+      "type": "color"
+    },
+    "link": {
+      "value": "#e6dfec",
+      "type": "color"
+    },
+    "link-hover": {
+      "value": "#ccbfd9",
+      "type": "color"
+    },
+    "link-active": {
+      "value": "#b39fc6",
+      "type": "color"
+    }
+  },
+  "table-cell": {
+    "value": "#050208",
+    "type": "color"
+  },
+  "table-header-cell": {
+    "value": "#4d2e6b",
+    "type": "color"
+  },
+  "table-hover-cell": {
+    "value": "#331a4d",
+    "type": "color"
+  },
+  "card-background": {
+    "value": "linear-gradient(35deg, #0d0811 0%, #553b6c30 100%)",
+    "type": "color"
+  },
+  "menu-card-background": {
+    "value": "linear-gradient(0deg, #291A37 0%, #291B37 11%, #3E314A 100%)",
+    "type": "color"
+  },
+  "menu-card-stroke": {
+    "value": "linear-gradient(180deg, #f2f8fd29 0%, #f2fcfd00 100%)",
+    "type": "color"
+  },
+  "card-stroke": {
+    "value": "#331a4d",
+    "type": "color"
+  },
+  "card-hover-shadow": {
+    "value": {
+      "x": 0,
+      "y": 0,
+      "blur": "22px",
+      "spread": 0,
+      "color": "#e3e5e8",
+      "type": "innerShadow"
+    },
+    "type": "boxShadow"
+  },
+  "stroke": {
+    "value": "#4d2e6b",
+    "type": "color",
+    "description": "Use with 50% opacity"
+  },
+  "radio-shadow-hover": {
+    "value": {
+      "x": 0,
+      "y": 0,
+      "blur": "22px",
+      "spread": 0,
+      "color": "#f2eff5",
+      "type": "dropShadow"
+    },
+    "type": "boxShadow"
+  },
+  "radio-shadow": {
+    "value": {
+      "x": 0,
+      "y": "5px",
+      "blur": "7px",
+      "spread": 0,
+      "color": "#331a4d70",
+      "type": "innerShadow"
+    },
+    "type": "boxShadow",
+    "description": "overall shadow for radio button"
+  }
+}

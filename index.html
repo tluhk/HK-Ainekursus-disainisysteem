@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="tailwind.css" />
+    <link rel="stylesheet" href="output/global.css" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/3aaccef86f.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body class="flex flex-col w-full min-h-screen gap-4 text-base p-8">
+    <main class="flex gap-4 max-w-[1200px] mx-auto relative">
+      <aside class="fixed right-0 top-8 w-48">
+        <div class="mode">
+          <input onclick="toggleTheme()" type="checkbox" id="switch" />
+          <label for="switch"></label>
+        </div>
+        <div class="flex flex-col gap-2 mt-4">
+          <a href="#typo">Tüpograafia</a>
+          <a href="#buttons">Nupud</a>
+          <a href="#inputs">Sisestusväljad</a>
+          <a href="#text">Tekstinäidis</a>
+          <a href="#">Üles</a>
+        </div>
+      </aside>
+      <section class="max-w-[calc(100%-12rem)]">
+        <i class="fa-solid fa-file-pen"></i>
+        <h1>Elemendid</h1>
+        <section id="typo">
+          <h2>Tüpograafia</h2>
+          <h1>H1-taseme pealkiri</h1>
+          <h2>H2-taseme pealkiri</h2>
+          <h3>H3-taseme pealkiri</h3>
+          <h4>H4-taseme pealkiri</h4>
+          <h5>H5-taseme pealkiri</h5>
+          <h6>H6-taseme pealkiri</h6>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi
+            labore, obcaecati perspiciatis quaerat ut ullam a architecto non
+            provident alias eligendi recusandae sint impedit. Dolorum laudantium
+            unde quos tempora voluptate?
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi
+            labore, obcaecati perspiciatis quaerat ut ullam a architecto non
+            provident alias eligendi recusandae sint impedit. Dolorum laudantium
+            unde quos tempora voluptate?
+          </p>
+        </section>
+        <section class="">
+          <h2>Nupud ja sisestusväljad</h2>
+          <h3 id="buttons">Nupud</h3>
+
+          <div class="grid grid-cols-4 gap-4">
+            <div class="col-span-1">
+              <button class="btn btn-primary">Vajuta</button>
+            </div>
+            <div class="col-span-3">
+              <pre><code class="language-html">
+              &lt;button class=&quot;btn btn-primary&quot;&gt;Vajuta&lt;/button&gt;
+          </code></pre>
+            </div>
+            <div class="col-span-1">
+              <button class="btn btn-secondary">Vajuta</button>
+            </div>
+            <div class="col-span-3">
+              <pre><code class="language-html">
+              &lt;button class=&quot;btn btn-secondary&quot;&gt;Vajuta&lt;/button&gt;
+          </code></pre>
+            </div>
+            <div class="col-span-1">
+              <button class="btn btn-primary">
+                <span class="material-icons">notifications</span>
+                Vajuta
+              </button>
+            </div>
+            <div class="col-span-3">
+              <pre><code class="language-html">
+              &lt;button class=&quot;btn btn-primary&quot;&gt;
+                &lt;span class=&quot;material-icons&quot;&gt;notifications&lt;/span&gt;
+                Vajuta
+              &lt;/button&gt;
+            </code>
+            </pre>
+            </div>
+            <div class="col-span-1">
+              <button class="btn btn-primary px-0">
+                <span class="material-icons">notifications</span>
+              </button>
+            </div>
+            <div class="col-span-3">
+              <pre><code class="language-html">
+              &lt;button class=&quot;btn btn-primary px-0&quot;&gt;
+                &lt;span class=&quot;material-icons&quot;&gt;notifications&lt;/span&gt;
+              &lt;/button&gt;
+            </code></pre>
+            </div>
+          </div>
+
+          <h4>Link-nupp</h4>
+          <div class="grid grid-cols-4 gap-4">
+            <div class="col-span-1">
+              <button class="btn-link">
+                <span class="material-icons">logout</span>Logi välja
+              </button>
+            </div>
+            <div class="col-span-3">
+              <pre><code class="language-html">
+              &lt;button class=&quot;btn-link&quot;&gt;
+                &lt;span class=&quot;material-icons&quot;&gt;logout&lt;/span&gt;Logi v&auml;lja
+              &lt;/button&gt;
+            </code></pre>
+            </div>
+          </div>
+
+          <h4>Nupp, mille puhul nupu tekst kaob kitsamas vaates:</h4>
+          <div class="grid grid-cols-4 gap-4">
+            <div class="col-span-1">
+              <button class="btn btn-primary px-0 md:px-6">
+                <span class="material-icons">notifications</span>
+                <span class="hidden md:block">Vajuta</span>
+              </button>
+            </div>
+            <div class="col-span-3">
+              <pre><code class="language-html">
+              &lt;button class=&quot;btn btn-primary px-0 md:px-6&quot;&gt;
+                &lt;span class=&quot;material-icons&quot;&gt;notifications&lt;/span&gt;
+                &lt;span class=&quot;hidden md:block&quot;&gt;Vajuta&lt;/span&gt;
+              &lt;/button&gt;
+            </code></pre>
+            </div>
+          </div>
+        </section>
+        <section id="inputs">
+          <h3>Sisestusväljad</h3>
+          <h4>Lihtne üherealine sisestusväli</h4>
+
+          <div class="grid grid-cols-8 gap-4">
+            <div class="col-span-3">
+              <input
+                class="input-single"
+                type="text"
+                placeholder="Kohahoidja"
+              />
+            </div>
+            <div class="col-span-5">
+              <pre><code class="language-html">
+              &lt;input class=&quot;input-single&quot; type=&quot;text&quot; placeholder=&quot;Kohahoidja&quot; /&gt;
+            </code></pre>
+            </div>
+          </div>
+
+          <h4>Nupuga üherealine sisestusväli</h4>
+          <p>
+            Et sisestusvälja laius oleks tasakaalus nupu laiusega, peaks
+            sisestama "calc(5ch+3rem)" osasse 5ch asemel selle tähtede arvu, mis
+            nupul sildil on:
+          </p>
+
+          <div class="grid grid-cols-8 gap-4">
+            <div class="col-span-3">
+              <div class="input-w-button">
+                <input
+                  class="input-single pr-[calc(5ch+3rem)]"
+                  type="text"
+                  placeholder="Kohahoidja"
+                />
+                <button class="btn btn-primary">Saada</button>
+              </div>
+            </div>
+            <div class="col-span-5">
+              <pre><code class="language-html">
+              &lt;div class=&quot;input-w-button&quot;&gt;
+                &lt;input class=&quot;input-single pr-[calc(5ch+3rem)]&quot; type=&quot;text&quot; placeholder=&quot;Kohahoidja&quot; /&gt;
+                &lt;button class=&quot;btn btn-primary&quot;&gt;Saada&lt;/button&gt;
+              &lt;/div&gt;
+            </code></pre>
+            </div>
+          </div>
+
+          <h4>
+            Nupuga üherealine sisestusväli kus nupu tekst kaob kitsamas vaates
+          </h4>
+          <p>
+            Et sisestusvälja laius oleks tasakaalus nupu laiusega, peaks
+            sisestama "calc(5ch+3rem)" osasse 5ch asemel selle tähtede arvu, mis
+            nupul sildil on pluss veel ikooniga kaasneva ja natuke veel, mis on
+            ca 3ch-d:
+          </p>
+
+          <div class="grid grid-cols-8 gap-4">
+            <div class="col-span-3">
+              <div class="input-w-button">
+                <input
+                  class="input-single pr-[calc(1ch+3rem)] md:pr-[calc(8ch+3rem)]"
+                  type="text"
+                  placeholder="Kohahoidja"
+                />
+                <button class="btn btn-primary px-0 md:px-6">
+                  <span class="material-icons">notifications</span>
+                  <span class="hidden md:block">Vajuta</span>
+                </button>
+              </div>
+            </div>
+            <div class="col-span-5">
+              <pre><code class="language-html">
+              &lt;div class=&quot;input-w-button&quot;&gt;
+                &lt;input class=&quot;input-single pr-[calc(1ch+3rem)] md:pr-[calc(8ch+3rem)]&quot; type=&quot;text&quot;
+                  placeholder=&quot;Kohahoidja&quot; /&gt;
+                &lt;button class=&quot;btn btn-primary px-0 md:px-6&quot;&gt;
+                  &lt;span class=&quot;material-icons&quot;&gt;notifications&lt;/span&gt;
+                  &lt;span class=&quot;hidden md:block&quot;&gt;Vajuta&lt;/span&gt;
+                &lt;/button&gt;
+              &lt;/div&gt;
+            </code></pre>
+            </div>
+          </div>
+        </section>
+        <section id="text">
+          <h2>Sisulehe näidis</h2>
+          <p>
+            Sellel lehel vormindatakse sisuosad artiklite ja sektsioonide abil.
+            Sel moel on lihtne kõik lõikude ja alampeatükkide vahed stiilifailis
+            defineerida.
+          </p>
+          <pre><code class="language-html">
+          &lt;article&gt;
+            &lt;header&gt;
+              &lt;h1&gt;Artikli pealkiri&lt;/h1&gt;
+              &lt;p&gt;Autor ja kuup&auml;ev&lt;/p&gt;
+            &lt;/header&gt;
+            &lt;section&gt;
+              &lt;h2&gt;Sissejuhatus&lt;/h2&gt;
+              &lt;p&gt;L&uuml;hike &uuml;levaade uudisest&lt;/p&gt;
+            &lt;/section&gt;
+            &lt;section&gt;
+              &lt;h2&gt;Olulised faktid&lt;/h2&gt;
+              &lt;p&gt;Detailsed faktid ja statistika&lt;/p&gt;
+            &lt;/section&gt;
+            &lt;section&gt;
+              &lt;h2&gt;Teema laiendus&lt;/h2&gt;
+              &lt;p&gt;Pikem jutt&lt;/p&gt;
+            &lt;/section&gt;
+            &lt;footer&gt;
+              &lt;p&gt;Allikas ja autori kontaktandmed&lt;/p&gt;
+            &lt;/footer&gt;
+          &lt;/article&gt;
+        </code></pre>
+
+          <article>
+            <header>
+              <h1>Artikli pealkiri</h1>
+              <p>Autor ja kuupäev</p>
+            </header>
+            <section>
+              <h2>Sissejuhatus</h2>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Pariatur aliquid ad culpa voluptatum, officia magnam ullam
+                voluptatibus voluptates reprehenderit earum at veritatis ut
+                dicta reiciendis quibusdam nulla laboriosam dolor voluptatem.
+                Beatae iusto atque veniam corporis perferendis delectus quisquam
+                excepturi, explicabo placeat mollitia? Doloribus culpa voluptas
+                debitis quam nulla voluptates necessitatibus, quasi nam, id
+                blanditiis repellendus odit obcaecati recusandae non deserunt.
+              </p>
+            </section>
+            <section>
+              <h2>Olulised faktid</h2>
+              <p>
+                Eveniet deleniti, quaerat ad itaque dolorem sint possimus odio
+                ut quia unde quas similique architecto, consequatur reiciendis
+                expedita a dolores cumque cupiditate amet natus vitae placeat?
+                Officia enim in quidem!
+              </p>
+            </section>
+            <section>
+              <h2>Teema laiendus</h2>
+              <p>
+                Fugit voluptas dicta minima possimus maiores amet debitis rerum,
+                ipsum modi sapiente impedit eligendi ipsa id necessitatibus
+                iusto dignissimos blanditiis. Harum quidem facere id recusandae
+                expedita molestiae aliquam dolorem voluptas. Consectetur animi
+                labore porro corrupti tempora nam unde accusantium eligendi,
+                ducimus ea hic repellat qui quaerat. Cum voluptatem quaerat
+                soluta quia, tenetur perspiciatis, repellendus dolorem debitis
+                assumenda, exercitationem quos? Obcaecati? Itaque pariatur quis
+                harum eaque tempora eligendi illo fuga laboriosam explicabo vero
+                molestiae adipisci, eum vitae? Sequi, ducimus architecto aut
+                fugit voluptate inventore nihil aliquid praesentium? Accusantium
+                voluptate facilis atque? Nihil, explicabo praesentium. Optio
+                animi quae
+              </p>
+              <h3>Alam-alampealkiri</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Pariatur aliquid ad culpa voluptatum, officia magnam ullam
+                voluptatibus voluptates reprehenderit earum at veritatis ut
+                dicta reiciendis quibusdam nulla laboriosam dolor voluptatem.
+                Beatae iusto atque veniam corporis perferendis delectus quisquam
+                excepturi, explicabo placeat mollitia? Doloribus culpa voluptas
+                debitis quam nulla voluptates necessitatibus, quasi nam, id
+                blanditiis repellendus odit obcaecati recusandae non deserunt.
+                Eveniet deleniti, quaerat ad itaque dolorem sint possimus odio
+                ut quia unde quas similique architecto, consequatur reiciendis
+                expedita a dolores cumque cupiditate amet natus vitae placeat?
+                Officia enim in quidem!
+              </p>
+              <button class="btn-link">
+                <span class="material-icons">launch</span>
+                <span class="hidden md:block">Vaata</span>
+              </button>
+              <p>
+                quis dignissimos amet quia earum. Quo autem minima voluptatum
+                cumque dolores ipsa, temporibus iure! Tenetur eos esse quas
+                sapiente ducimus, minima officiis ex modi? Ex architecto ad
+                minus ipsum repellendus quam molestias id recusandae est totam
+                cupiditate praesentium, delectus, accusamus tempora nobis
+                debitis voluptatem in officia perferendis quis? Minus,
+                blanditiis unde. Est, pariatur veniam. Cumque suscipit vitae sit
+                natus beatae asperiores, delectus amet! Tempora quis ratione
+                quaerat repellat. Labore porro necessitatibus ipsa velit. Ipsum
+                quasi provident quidem nulla fuga quibusdam itaque inventore
+                modi repellat.
+              </p>
+              <p>
+                Expedita libero ex iste, delectus beatae itaque ullam nulla ut
+                illum enim ipsa ratione? Veniam quisquam voluptas mollitia
+                doloribus. Eligendi at accusamus adipisci? Beatae quos nostrum
+                at ipsa nemo quia.
+              </p>
+              <h4>Mõned väiksemad H4 pealkirjad</h4>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Pariatur aliquid ad culpa voluptatum, officia magnam ullam
+                voluptatibus voluptates reprehenderit earum at veritatis ut
+                dicta reiciendis quibusdam nulla laboriosam dolor voluptatem.
+                Beatae iusto atque veniam corporis perferendis delectus quisquam
+                excepturi, explicabo placeat mollitia? Doloribus culpa voluptas
+                debitis quam nulla voluptates necessitatibus, quasi nam, id
+                blanditiis repellendus odit obcaecati recusandae non deserunt.
+                Eveniet deleniti, quaerat ad itaque dolorem sint possimus odio
+                ut quia unde quas similique architecto, consequatur reiciendis
+                expedita a dolores cumque cupiditate amet natus vitae placeat?
+                Officia enim in quidem!
+              </p>
+              <h4>Veel üks H4</h4>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Pariatur aliquid ad culpa voluptatum, officia magnam ullam
+                voluptatibus voluptates reprehenderit earum at veritatis ut
+                dicta reiciendis quibusdam nulla laboriosam dolor voluptatem.
+                Beatae iusto atque veniam corporis perferendis delectus quisquam
+                excepturi, explicabo placeat mollitia? Doloribus culpa voluptas
+                debitis quam nulla voluptates necessitatibus, quasi nam, id
+                blanditiis repellendus odit obcaecati recusandae non deserunt.
+                Eveniet deleniti, quaerat ad itaque dolorem sint possimus odio
+                ut quia unde quas similique architecto, consequatur reiciendis
+                expedita a dolores cumque cupiditate amet natus vitae placeat?
+                Officia enim in quidem!
+              </p>
+              <h5>Siia paar H5-te</h5>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Pariatur aliquid ad culpa voluptatum, officia magnam ullam
+                voluptatibus voluptates reprehenderit earum at veritatis ut
+                dicta reiciendis quibusdam nulla laboriosam dolor voluptatem.
+                Beatae iusto atque veniam corporis perferendis delectus quisquam
+                excepturi, explicabo placeat mollitia? Doloribus culpa voluptas
+                debitis quam nulla voluptates necessitatibus, quasi nam, id
+                blanditiis repellendus odit obcaecati recusandae non deserunt.
+                Eveniet deleniti, quaerat ad itaque dolorem sint possimus odio
+                ut quia unde quas similique architecto, consequatur reiciendis
+                expedita a dolores cumque cupiditate amet natus vitae placeat?
+                Officia enim in quidem!
+              </p>
+              <div class="flex gap-4">
+                <button class="btn btn-primary">Vajuta</button>
+                <button class="btn btn-secondary">Ära vajuta</button>
+              </div>
+              <h5>Veel üks h5</h5>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Pariatur aliquid ad culpa voluptatum, officia magnam ullam
+                voluptatibus voluptates reprehenderit earum at veritatis ut
+                dicta reiciendis quibusdam nulla laboriosam dolor voluptatem.
+                Beatae iusto atque veniam corporis perferendis delectus quisquam
+                excepturi, explicabo placeat mollitia? Doloribus culpa voluptas
+                debitis quam nulla voluptates necessitatibus, quasi nam, id
+                blanditiis repellendus odit obcaecati recusandae non deserunt.
+                Eveniet deleniti, quaerat ad itaque dolorem sint possimus odio
+                ut quia unde quas similique architecto, consequatur reiciendis
+                expedita a dolores cumque cupiditate amet natus vitae placeat?
+                Officia enim in quidem!
+              </p>
+              <h6>Ja üks H6</h6>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Pariatur aliquid ad culpa voluptatum, officia magnam ullam
+                voluptatibus voluptates reprehenderit earum at veritatis ut
+                dicta reiciendis quibusdam nulla laboriosam dolor voluptatem.
+                Beatae iusto atque veniam corporis perferendis delectus quisquam
+                excepturi, explicabo placeat mollitia? Doloribus culpa voluptas
+                debitis quam nulla voluptates necessitatibus, quasi nam, id
+                blanditiis repellendus odit obcaecati recusandae non deserunt.
+                Eveniet deleniti, quaerat ad itaque dolorem sint possimus odio
+                ut quia unde quas similique architecto, consequatur reiciendis
+                expedita a dolores cumque cupiditate amet natus vitae placeat?
+                Officia enim in quidem!
+              </p>
+            </section>
+            <footer>
+              <p>Allikas ja autori kontaktandmed</p>
+              <div class="flex gap-4">
+                <button class="bg btn btn-primary">Vajuta</button>
+                <button class="btn btn-secondary">Ära vajuta</button>
+              </div>
+            </footer>
+          </article>
+        </section>
+      </section>
+    </main>
+    <script>
+      function setTheme(name) {
+        localStorage.setItem("theme", name);
+        document.documentElement.className = name;
+      }
+
+      function toggleTheme() {
+        if (localStorage.getItem("theme") === "dark-theme") {
+          setTheme("light-theme");
+        } else {
+          setTheme("dark-theme");
+        }
+      }
+
+      (function () {
+        if (localStorage.getItem("theme") === "dark-theme") {
+          setTheme("dark-theme");
+        } else {
+          setTheme("light-theme");
+        }
+      })();
+    </script>
+
+    <script src="src/prism/prism.js"></script>
+
+    <script>
+      Prism.highlightAll();
+    </script>
+  </body>
+</html>

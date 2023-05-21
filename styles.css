@@ -1,0 +1,13 @@
+@import 'tailwindcss/base';
+
+@import 'tailwindcss/components';
+@import 'output/light.css';
+@import 'output/dark.css';
+@import 'custom.css';
+@import 'typography.css';
+
+@import 'mode-switch.css';
+@import 'background-gradient.css';
+
+/* 3rd party */
+@import 'src/prism/prism.css';
